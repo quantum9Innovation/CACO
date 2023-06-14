@@ -2,7 +2,7 @@
 Runs a pool of workers to analyze all parts of the sample.
 
 Depending on the number of cores you have, this script may take
-different amounts of time to run.
+different amounts of time to run (expect anywhere from 30-180 min).
 
 Each analyzed file will be stored in a new document with a p- prefix
 in front of the original filename.
