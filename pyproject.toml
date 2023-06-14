@@ -9,6 +9,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 hornmorphoa = {path = "dist/HornMorphoA-4.3-py3-none-any.whl"}
+toml = "^0.10.2"
 
 [build-system]
 requires = ["poetry-core"]
