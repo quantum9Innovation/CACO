@@ -7,6 +7,16 @@ Since it is partly a web corpus, we made some automatic spelling error correctio
 Though the corpus was originally tagged with HornMorpho v3, you'll need to download HornMorpho v4 to run the scripts in this repository (if you plan on running any custom morphological analyses).
 You can download it from: <https://github.com/hltdi/HornMorpho>
 
+## Running the web version
+
+You can perform basic functions such as getting examples of words in context or morphological analyses from the [Flask app](./app/).
+To start it, first install all dependencies with `poetry install` or equivalent.*
+Then, run `gunicorn app.main:app` to start a production server.
+From there, you can use the pages linked to perform basic functions.
+Note that the web UI accesses a representative sample of the corpus (about 1% its size), so it won't have words that are not very frequent.
+
+*See [installation instructions for HornMorpho](https://github.com/hltdi/HornMorpho) if you get an error installing from requirements; HornMorpho will need to be built separately but you can install the rest of the requirements as normal.
+
 ## Download
 
 Download and extract the corpus using the link below before running any of the processing scripts in this repository.
