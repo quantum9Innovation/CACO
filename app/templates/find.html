@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Find Examples</title>
+    <link rel="icon" href="/static/img/favicon.ico">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <script>
+        const highlightAnything = () => {
+            const regex = /:HIGHLIGHT:([^:]+):HIGHLIGHT:/g
+            const listItems = document.querySelectorAll('li')
+
+            for (const listItem of listItems) {
+                const itemHtml = listItem.innerHTML
+                const highlightedHtml = itemHtml.replace(regex, '<mark>$1</mark>')
+                listItem.innerHTML = highlightedHtml
+            }
+        }
+
+        window.onload = highlightAnything
+    </script>
+</head>
+
+<body>
+    <h1>Find Examples of "{{ word }}"</h1>
+    <form method="get">
+        <label for="word">Word:</label>
+        <input type="text" id="word" name="word" value="{{ word }}">
+        <br>
+        <label for="n">Number of Examples:</label>
+        <input type="number" id="n" name="n" value="5">
+        <br>
+        <input type="submit" value="Find Examples">
+    </form>
+    {% if results %}
+    <h2>Results</h2>
+    <ul>
+        {% for result in results %}
+        <li>{{ result }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No examples found.</p>
+    {% endif %}
+    <br>
+    <a href="{{ url_for('index') }}">Back to main page</a>
+</body>
+
+</html>

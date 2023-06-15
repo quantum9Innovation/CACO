@@ -1,0 +1,133 @@
+/* Global styles */
+
+@font-face {
+  font-family: 'Noto Sans Ethiopic';
+  src: url('/static/fonts/noto/NotoSansEthiopic.ttf');
+}
+
+body {
+  font-family: 'Noto Sans Ethiopic', sans-serif !important;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  color: #1a1a1a;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+input[type=text],
+input[type=number],
+input[type=submit] {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input[type=submit] {
+  background-color: #5c8beb !important;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+}
+
+input[type=submit]:hover {
+  background-color: #357ae8 !important;
+}
+
+input[type=submit]:active {
+  background-color: #1c62cf !important;
+}
+
+/* Specific styles for index.html */
+#index h1 {
+  font-size: 3em;
+}
+
+#index p {
+  font-size: 1.2em;
+}
+
+#index ul {
+  margin-top: 20px;
+}
+
+#index li {
+  margin-bottom: 10px;
+}
+
+/* Specific styles for find.html */
+#find h1 {
+  font-size: 3em;
+}
+
+#find form {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#find input[type=submit] {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#find h2 {
+  margin-top: 20px;
+}
+
+#find ul {
+  margin-top: 10px;
+}
+
+#find li {
+  margin-bottom: 5px;
+}
+
+#find mark {
+  background-color: yellow;
+}
+
+/* Specific styles for analyze.html */
+#analyze h1 {
+  font-size: 3em;
+}
+
+#analyze form {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#analyze input[type=submit] {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#analyze h2 {
+  margin-top: 20px;
+}
+
+#analyze ul {
+  margin-top: 10px;
+}
+
+#analyze li {
+  margin-bottom: 5px;
+}

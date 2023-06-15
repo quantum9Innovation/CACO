@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Analyze Word</title>
+    <link rel="icon" href="/static/img/favicon.ico">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+</head>
+
+<body>
+    <h1>Analyze "{{ word }}"</h1>
+    <form method="get">
+        <label for="word">Word:</label>
+        <input type="text" id="word" name="word" value="{{ word }}">
+        <br>
+        <input type="submit" value="Analyze Word">
+    </form>
+    {% if result %}
+    <h2>Result</h2>
+    <ul>
+        <li>Word: {{ result['word'] }}</li>
+        <li>POS: {{ result['POS'] }}</li>
+        <li>Lemma: {{ result['lemma'] }}</li>
+        <li>Definitions: {{ result['definitions'] }}</li>
+    </ul>
+    {% endif %}
+    <br>
+    <a href="{{ url_for('index') }}">Back to main page</a>
+</body>
+
+</html>
